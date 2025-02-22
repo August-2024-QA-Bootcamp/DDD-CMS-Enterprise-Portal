@@ -2,6 +2,8 @@ package baseUtil;
 import java.lang.reflect.Method;
 import java.time.Duration;
 
+import javax.security.auth.login.LoginContext;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -23,6 +25,7 @@ import common.CommonActions;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import pages.HomePage;
 import pages.HomePageParameterized;
+import pages.Login;
 import pages.NewUserRegistration;
 import reports.ExtentReportManager;
 import reports.TestManager;
@@ -34,6 +37,7 @@ public class BaseClass {
 	public HomePage homePage;
 	public HomePageParameterized homePageParameterized;
 	public NewUserRegistration newUserRegistration;
+	public Login login;
 	Configuration configuration;
 	ExtentReports extentReports;
 	ExtentTest extentTest;
@@ -57,7 +61,7 @@ public class BaseClass {
 	
 	@Parameters("browser")
 	@BeforeMethod	
-	public void setUp(@Optional(EDGE) String browserName) {		
+	public void setUp(@Optional(FIREFOX) String browserName) {		
 		initDriver(browserName);
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
@@ -98,6 +102,7 @@ public class BaseClass {
 		homePage = new HomePage(driver);
 		newUserRegistration = new NewUserRegistration(driver);
 		homePageParameterized = new HomePageParameterized(driver);
+		login = new Login(driver);
 	}
 		
 	@AfterMethod

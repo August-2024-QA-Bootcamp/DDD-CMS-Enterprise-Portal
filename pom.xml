@@ -49,6 +49,19 @@
 			<version>2.0.16</version>
 			<scope>test</scope>
 		</dependency>
+		<!-- This is a JDBC connector, Connect our framework with PostgreSQL -->
+		<!-- pgadmin is a tool, postgresql is a structural database-->
+		<!-- for Oracle sql developer below one-->
+		<!-- https://mvnrepository.com/artifact/ojdbc/ojdbc-->
+		<!-- for MySQL below one-->
+		<!-- https://mvnrepository.com/artifact/com.mysql/mysql-connector-j-->
+		<!-- for MongoDB below one-->
+		<!-- https://mvnrepository.com/artifact/org.mongodb/mongodb-driver-sync-->
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>42.7.5</version>
+		</dependency>
 	</dependencies>
 
 	<build>

@@ -60,6 +60,11 @@ public class CommonActions {
 		}		
 	}
 	
+	/**
+	 * 
+	 * @param element WebElement
+	 */
+	
 	public static void elementDisplayed(WebElement element) {
 		try {
 			boolean flag = element.isDisplayed();
@@ -256,11 +261,22 @@ public class CommonActions {
 		Loggers.logTheTest("JavascriptExecutor executing ..." + " arguments[0].click()" + " to click on element ---> " + element);
 	}
 	
+	/**
+	 * 
+	 * @param driver WebDriver
+	 * @param script String
+	 * @param element WebElement
+	 */
 	public static void inputTextUsingJavascriptExecutor(WebDriver driver, String script, WebElement element) {
 		((JavascriptExecutor) driver).executeScript(script, element);
 		Loggers.logTheTest("JavascriptExecutor executing ..." + script + " to input Text on element ---> " + element);
 	}
 	
+	/**
+	 * 
+	 * @param driver WebDriver
+	 * @param element WebElement
+	 */
 	public static void scrollIntoViewTheElementUsingJavascriptExecutor(WebDriver driver, WebElement element) {
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true)", element);
 		Loggers.logTheTest("JavascriptExecutor executing ..." + " arguments[0].scrollIntoView(true)" + " to input Text on element ---> " + element);

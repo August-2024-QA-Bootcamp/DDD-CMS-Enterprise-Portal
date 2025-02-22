@@ -1,28 +1,7 @@
 package pagesTest;
 
-import static common.CommonActions.clearTextFromTheField;
-import static common.CommonActions.clickElement;
-import static common.CommonActions.clickElementThenTab;
-import static common.CommonActions.elementEnabled;
-import static common.CommonActions.inputText;
-import static common.CommonActions.inputTextThenClickTab;
-import static common.CommonActions.pause;
-import static common.CommonActions.scrollIntoViewTheElementUsingJavascriptExecutor;
-import static common.CommonActions.selectDropdown;
-import static common.CommonActions.selectElelementFromDropdownOnebyOne;
-import static common.CommonActions.validationOfHeader;
-import static common.CommonActions.validationOfOtherHeader;
-import static common.CommonActions.validationOfSubHeader;
-import static common.CommonActions.verifyCurrentUrl;
-import static common.CommonActions.verifyErrorMessageOnTheTopOfThePage;
-import static common.CommonActions.verifyErrorMessageUnderTheField;
-import static common.CommonActions.verifyLengthOfTheFieldContent;
-import static common.CommonActions.verifyTextOfTheWebElement;
-import static common.CommonActions.verifyTitle;
-
 import org.testng.annotations.Test;
 import baseUtil.BaseClass;
-import constants.Attribute;
 
 public class NewUserRegistrationTest extends BaseClass {
 	
