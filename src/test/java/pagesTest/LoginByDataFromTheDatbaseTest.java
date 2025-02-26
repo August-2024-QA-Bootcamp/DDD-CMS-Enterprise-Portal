@@ -16,7 +16,7 @@ public class LoginByDataFromTheDatbaseTest extends BaseClass {
 	// When it is not defined like String, Integer or mixed data present
 	public Object[][] getUserObjects(){
 		List<User>list = UserQueries.getUsers();
-		Object[][] objects = new Object[list.size()][];
+		Object[][] objects = new Object[list.size()][]; // Naveen's 2nd interview question
 		for (int i = 0; i < list.size(); i++) {
 			objects[i] = new Object[] { list.get(i) };
 		}
@@ -39,8 +39,7 @@ public class LoginByDataFromTheDatbaseTest extends BaseClass {
 		login.validatePassword(user.getPassword());
 		login.validateCheckBox();
 		login.validateLogin();
-		login.landingOnMultiFactorAuthentication();
-		
+		login.landingOnMultiFactorAuthentication();		
 	}
 	
 	// Next class we will retrieve data from excel sheet	and similar execution

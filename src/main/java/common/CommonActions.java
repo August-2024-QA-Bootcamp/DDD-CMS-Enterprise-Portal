@@ -40,6 +40,8 @@ public class CommonActions {
 		}		
 	}
 	
+	// we have to create submit method to click on submit button.
+	
 	// common method for sleep()
 	public static void pause(long millis) {
 		try {
